@@ -127,6 +127,7 @@ header .localisation__description {
 }
 
 .restaurant {
+  border: none;
   width: 100%;
   height: 1200px;
   background-color: #f3f3f3;
@@ -168,6 +169,7 @@ header .localisation__description {
   margin: 0px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 .carte__vignette {
   position: absolute;
@@ -210,6 +212,34 @@ header .localisation__description {
   align-self: center;
   justify-self: center;
   color: #646464;
+}
+
+.menu {
+  height: 160px;
+  background-color: #424242;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20px;
+  color: white;
+}
+.menu__titre {
+  margin: 10px 0px 10px 0px;
+  font-size: large;
+}
+.menu__contenant {
+  padding: 0px;
+  margin: 0px;
+}
+.menu__onglet {
+  display: flex;
+  margin-top: 3px;
+  align-items: center;
+  width: 100%;
+}
+.menu__icone {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
