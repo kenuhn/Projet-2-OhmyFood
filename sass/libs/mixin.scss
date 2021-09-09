@@ -1,0 +1,53 @@
+@mixin centrer {
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+@mixin contenant{
+    width: 90%;
+    height: 70px;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 10% 10% 80%;
+    grid-template-rows: 1fr;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: -1px 3px 6px 1px #e2e0e0;
+
+    &:hover {
+        background-color: $violet-transparent ;
+    }
+}
+
+@mixin place-menu {
+        grid-column: 1/2;
+        grid-row: 1/2;
+}
+
+@mixin bouton {
+
+        border-radius: 30px;
+        width: 45%;
+        height: 50px;
+        color: white;
+        background-image: $degrade;
+        font-size: medium;
+        box-shadow: 3px 6px 3px #e2e0e0;
+        cursor: pointer;
+        transform: scale(1);
+        transition: all 300ms ease-in-out;
+
+        &:hover{
+            transform: scale( 1.15);
+            background-color: transparent ;
+            
+        }
+       
+ }
+
+
+
