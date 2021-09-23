@@ -55,7 +55,7 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
-  height: 600px;
+  height: 650px;
   background-color: #f3f3f3;
   border-radius: 25px 25px 0px 0px;
   display: grid;
@@ -70,8 +70,7 @@ body {
   grid-template-rows: 1fr;
 }
 .menu__big--titre {
-  border: solid;
-  margin-left: 30px;
+  margin-left: 50px;
   width: 300px;
   height: 30px;
   grid-row: 1/2;
@@ -91,19 +90,25 @@ body {
 .menu__entre {
   grid-column: 1/2;
   grid-row: 2/3;
-  align-self: center;
+  margin-top: 20px;
+  align-self: start;
+  margin-left: 20px;
   width: 100%;
 }
 .menu__plat {
+  margin-top: 20px;
   grid-column: 2/3;
   grid-row: 2/3;
-  align-self: center;
+  align-self: start;
+  margin-left: 20px;
   width: 100%;
 }
 .menu__desserts {
+  margin-top: 20px;
   grid-column: 3/4;
   grid-row: 2/3;
-  align-self: center;
+  align-self: start;
+  margin-left: 20px;
   width: 100%;
 }
 .menu__bouton {
@@ -246,7 +251,7 @@ body {
 }
 
 .foot {
-  top: 565px;
+  top: 600px;
   position: relative;
   height: 160px;
   background-color: #424242;
@@ -278,7 +283,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   .menu {
-    height: 1300px;
+    height: 1500px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
@@ -315,8 +320,8 @@ body {
   }
 
   .foot {
-    top: 1260px;
+    top: 1460px;
   }
 }
 
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=style3.css.map */
