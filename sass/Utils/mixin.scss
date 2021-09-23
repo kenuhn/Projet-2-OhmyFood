@@ -6,21 +6,16 @@
 }
 
 @mixin contenant{
-    width: 90%;
+    width: 80%;
     height: 70px;
     background-color: #f3f3f3;
-    border-radius: 25px;
-    margin: 30px;
-    display: grid;
-    grid-template-columns: 10% 10% 80%;
-    grid-template-rows: 1fr;
-    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    border-radius: 15px;
+    margin: 30px 0px 30px 0px;
     cursor: pointer;
     box-shadow: -1px 3px 6px 1px #e2e0e0;
-
-    &:hover {
-        background-color: $violet-transparent ;
-    }
 }
 
 @mixin place-menu {
@@ -50,4 +45,6 @@
  }
 
 
-
+@mixin taille {
+    width: 100%;
+}

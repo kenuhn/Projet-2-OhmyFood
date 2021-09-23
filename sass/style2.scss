@@ -1,18 +1,12 @@
 
-@import "libs/mixin.scss";
-@import "libs/variable.scss";
-@import "libs/animation.scss";
-@import "libs/class-gene.scss";
+@import "Utils/mixin.scss";
+@import "Utils/variable.scss";
+@import "Utils/animation.scss";
+@import "Utils/class-gene.scss";
 body{
     margin:0;
     padding: 0;
 }
-
-main{
-    display: flex;
-    flex-flow: column;
-}
-
 
 .tete{
    
@@ -63,7 +57,7 @@ main{
 
 .menu{
     position: absolute;
-    top: 300px;
+    top: 350px;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -73,16 +67,26 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10% 75% 15%;
+    
+    &__tete{
+        grid-row: 1/2;
+        grid-column: 1/4;
 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
     &__big--titre{
-        margin-top: 30px;
+      
         margin-left: 30px;
         width: 200px;
         height: 30px;
         grid-row: 1/2;
         grid-column: 1/2;
-        align-self: center;
+        align-self: end;
         justify-self: start;
+        font-size: x-large;
+        font-family: 'Shrikhand';
     }
 
     &__titre{
@@ -97,33 +101,20 @@ main{
         grid-column: 1/2;
         grid-row: 2/3; 
         align-self: center;
+        @include taille;
     }
     &__plat{
         grid-column: 2/3;
         grid-row: 2/3;
         align-self: center;
+        @include taille;
     }
 
     &__desserts{
         grid-column: 3/4;
         grid-row: 2/3;
         align-self: center;
-    }
-
-    &__contenant{
-        @include contenant;
-        background-color: white;
-        display:grid;
-        grid-template-columns: 80% 20%;
-        grid-template-rows: 1fr;
-        transform: scale(1);
-        transition: all 300ms ease-in-out;
-
-        &:hover{
-            transform: scale(1.15);
-        }
-
-       
+        @include taille;
     }
 
     &__bouton{
@@ -138,12 +129,17 @@ main{
     &__coeur{
         position: relative;
         z-index: 1;
-        font-size: xx-large;
-        grid-column: 3/4;
         grid-row: 1/2;
-        align-self: center;
+        grid-column: 2/3;
+        font-size: x-large;
+       
+     
+        width: 25px;
+        height: 25px;
+        align-self: flex-end;
         justify-self: end;
-        margin-right: 70px;
+        margin-right: 40px;
+
         @include animicone;
 
         .coeur-vide{
@@ -155,32 +151,182 @@ main{
             transition: all 300ms ease-in-out;
             transform: scale(0.8)
         }
+    } 
+}
+
+
+
+
+.menu__contenant{
+    @include contenant;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 15px;
+    
+
+    &:hover .menu__contenant--check {
+        right: 0;
+        transition: 400ms;
     }
 
+    &:hover .menu__contenant--texte{
+        flex-basis: 65%;
+        transition: 400ms;
+        flex-grow: 0;
+        
+
+    }
+
+    &:hover  .menu__contenant--turn{
+        transform: rotate(0);
+    }
+    
+&--titre {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 0px 0px 15px;
+    flex-basis: 100%;
+}
+
+&--texte{
+    
+   flex-grow: 1;
+   flex-shrink: 1;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin: 0px 0px 10px 15px;
+   border: solid;
+   
+   
+
+}
+
+&--prix{
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-right: 1rem;
+    padding-left: .5rem;
+    align-self: flex-start;
+    font-weight: bold;
+    flex-basis: 1rem;
+    border: solid;
+    
     
 }
-.contenant--titre{
-    @include place-menu;
-    width: 100%;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 15px;
-    align-self: start;
-    justify-self: start;
-}
-.contenant--texte{
-   @include place-menu;
-   width: 100%;
-   height: 20px;
-   margin-left: 15px;
-   align-self: end;
-   justify-self: start;
+
+&--check{
+    background-color: $azure;
+    width: 60px;
+    height: 100%;
+    color: white;
+    @include centrer;
+    font-size: xx-large;
+    border-radius: 0px;
+    position: absolute;
+    right: -100px;
+    padding-left: .5rem;
+    margin-left: 1rem;
 }
 
-.contenant--prix{
-    grid-row: 1/2;
-    grid-column: 2/3;
-    align-self: end;
+&--turn{
+    position:absolute;
+    transform: rotate(180deg);
+    transition-duration: .5s;
+}
 }
 
 
+.foot {
+    top: 565px;
+    position: relative;
+    height: 160px;
+    background-color:rgb(66, 66, 66) ;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    color: white;
+
+    &__titre
+    {
+        margin: 10px 0px 10px 0px;
+        font-size: large;
+        
+    }
+
+    &__contenant{
+       
+        padding: 0px;
+        margin: 0px;
+    }
+    &__onglet
+    {
+        display: flex;
+        margin-top: 3px;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &__icone{
+        margin-right: 5px;
+       
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .menu{
+        height: 1300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+        &__tete {
+            grid-column: 1/2;
+            grid-row: 1/2;
+         
+        }
+
+        &__entre{
+            grid-column: 1/2;
+            grid-row: 2/3; 
+            align-self: center;
+        }
+        &__plat{
+            grid-column: 1/2;
+            grid-row: 3/4;
+       
+        }
+    
+        &__desserts{
+            grid-column: 1/2;
+            grid-row: 4/5;
+          
+        }
+
+        &__bouton{
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        &__coeur{
+            align-self: center;
+        }
+
+        &__big--titre{
+            align-self: center;
+        }
+
+    }
+
+    .menu__contenant{
+        width: 90%;
+    }
+
+    .foot{
+        top: 1260px;
+    }
+}
