@@ -77,9 +77,8 @@ body{
         grid-template-rows: 1fr;
     }
     &__big--titre{
-        border: solid;
         margin-left: 30px;
-        width: 300px;
+        width: 250px;
         height: 30px;
         grid-row: 1/2;
         grid-column: 1/2;
@@ -87,6 +86,7 @@ body{
         justify-self: start;
         font-size: x-large;
         font-family: 'Shrikhand';
+       
     }
 
     &__titre{
@@ -138,8 +138,7 @@ body{
         height: 25px;
         align-self: flex-end;
         justify-self: end;
-        margin-right: 40px;
-
+        margin-right: 50px;
         @include animicone;
 
         .coeur-vide{
@@ -158,7 +157,16 @@ body{
 
 
 .menu__contenant{
-    @include contenant;
+    width: 75%;
+    height: 70px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    border-radius: 15px;
+    margin: 30px 0px 30px 0px;
+    cursor: pointer;
+    box-shadow: -1px 3px 6px 1px #e2e0e0;
     background-color: white;
     overflow: hidden;
     position: relative;
@@ -172,36 +180,45 @@ body{
         transition: 400ms;
     }
 
-    &:hover .menu__contenant--texte{
-        flex-basis: 65%;
+    &:hover .menu__contenant--prix{
+        flex-basis: 8rem;
         transition: 400ms;
-        flex-grow: 0;
-        
-
     }
 
     &:hover  .menu__contenant--turn{
         transform: rotate(0);
     }
-    
-&--titre {
+
+&--head{
+    flex: 1 2 auto;
+    max-width: 90%;
+    margin: 10px 0px 0px 15px;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 10px 0px 0px 15px;
-    flex-basis: 100%;
+    white-space: nowrap;
+}
+    
+&--titre {
+    width: 100%;
+    margin: 6px 0px 5px 0px;
+    padding: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  
 }
 
 &--texte{
-    
-   flex-grow: 1;
-   flex-shrink: 1;
+   width: 100%;
+   margin: 0px;
+   padding: 0px; 
    overflow: hidden;
    text-overflow: ellipsis;
-   margin: 0px 0px 10px 15px;
-   border: solid;
-   
-   
-
+   white-space: nowrap;
 }
 
 &--prix{
@@ -209,12 +226,12 @@ body{
     margin-bottom: 10px;
     margin-right: 1rem;
     padding-left: .5rem;
-    align-self: flex-start;
+    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
     font-weight: bold;
     flex-basis: 1rem;
-    border: solid;
-    
-    
+    height: 50px;
 }
 
 &--check{
@@ -222,7 +239,9 @@ body{
     width: 60px;
     height: 100%;
     color: white;
-    @include centrer;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
     font-size: xx-large;
     border-radius: 0px;
     position: absolute;
@@ -264,12 +283,13 @@ body{
         margin: 0px;
     }
     &__onglet
-    {
+    {   
         display: flex;
         margin-top: 3px;
         align-items: center;
         width: 100%;
         cursor: pointer;
+        
     }
 
     &__icone{
@@ -328,5 +348,15 @@ body{
 
     .foot{
         top: 1260px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .menu__contenant{
+        width: 75%;
+        margin-left: 35px;
+        
+       
     }
 }
