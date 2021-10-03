@@ -37,3 +37,44 @@
 
 
  @keyframes rotate-right{0%{transform:rotate(0);transform-origin:right}100%{transform:rotate(360deg);transform-origin:right}}
+
+ @keyframes spin{ 
+     0%{transform:rotate(0)}
+     100%{transform:rotate(360deg)}
+ }
+
+@mixin scale-in-top{
+
+    @-webkit-keyframes scale-in-top {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          -webkit-transform-origin: 50% 0%;
+                  transform-origin: 50% 0%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-transform-origin: 50% 0%;
+                  transform-origin: 50% 0%;
+          opacity: 1;
+        }
+      }
+      @keyframes scale-in-top {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          -webkit-transform-origin: 50% 0%;
+                  transform-origin: 50% 0%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-transform-origin: 50% 0%;
+                  transform-origin: 50% 0%;
+          opacity: 1;
+        }
+      }
+} 
