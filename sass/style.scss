@@ -3,6 +3,7 @@ body{
     padding: 0;
     
 }
+
 @import "Utils/animation.scss";
 @import "Utils/variable.scss";
 
@@ -195,7 +196,7 @@ header{ /* tout la partie du haut jusqu'a la séction bienvenue*/
 
         }
     }
-
+   
     &__contenant:nth-child(2) { grid-row: 2/3;}
     &__contenant:nth-child(3) { grid-row: 3/4;}
     &__contenant:last-child { grid-row: 4/5;}
@@ -205,15 +206,13 @@ header{ /* tout la partie du haut jusqu'a la séction bienvenue*/
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: xx-small;
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
         background-color: #9356DC;
         color: white;
         position: absolute;
         left: -10px;
-
-        @extend %centrer;
     }
     &__icone{
         grid-column: 2/3;
@@ -235,7 +234,13 @@ header{ /* tout la partie du haut jusqu'a la séction bienvenue*/
         grid-row: 1/2;
     }
 }
-
+.fonctionnement__contenu{
+    position: absolute;
+    top: -8px;
+    left: 9px;
+    font-size: small;
+    
+}
 .restaurant{
 
     align-self: center;
@@ -323,8 +328,8 @@ a{
         right: 1rem;
         width: 70px;
         height: 30px;
-        background-color: #99E2D0;
-        color: #446159;
+        background-color: $azure;
+        color: #1f997c;
         border-radius: 3px;
         @extend %centrer
    }
@@ -339,26 +344,26 @@ a{
      grid-template-columns: 75% 25%;
      grid-template-rows: 1fr;
      border-radius: 0px 0px 20px 20px;
-     
-     
-     
-     
    }
+   
     &__nom{
     grid-column: 1/2;
     grid-row: 1/2;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 15px;
     align-self:start;
-    
+    font-weight: bold;
+    font-size: medium;
    }
+
    &__localisation{
     grid-column: 1/2;
     margin-left: 15px;
     grid-row: 1/2;  
     align-self: center;
     margin-top: 15px;
-    color: rgb(185, 184, 184);
+    color: rgb(0, 0, 0);
+    
    }
 
    &__icone{
@@ -369,7 +374,6 @@ a{
     width: 50%;
     grid-column: 2/3;
     grid-row: 1/2;
-    color: rgb(100, 100, 100);
     cursor: pointer;
     user-select: none;
     font-size: xx-large;

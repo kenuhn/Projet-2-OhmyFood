@@ -39,6 +39,7 @@ body {
 .tete__fleches {
   margin-left: 35px;
   font-size: xx-large;
+  color: black;
   width: 25px;
   align-self: center;
   grid-column: 1/2;

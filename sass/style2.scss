@@ -19,18 +19,18 @@ body{
 
     &__titre{
         text-align: center;
-       
         width: 200px;
         align-self: center;
         justify-self: center;
         grid-column: 2/3;
         grid-row: 1/2;
+        
     }
 
    &__fleches{
        margin-left: 35px;
        font-size: xx-large;
-       
+       color: black;
        width: 25px;
        align-self: center;
        grid-column: 1/2;

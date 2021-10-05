@@ -22,7 +22,7 @@ body {
     transform: rotate(360deg);
   }
 }
-.carte__vignette, .fonctionnement__numero, .bienvenue__bouton, header .localisation__contenant, header .titre__site, .spinner {
+.carte__vignette, .bienvenue__bouton, header .localisation__contenant, header .titre__site, .spinner {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -200,9 +200,9 @@ header .localisation__description {
   grid-column: 1/2;
   grid-row: 1/2;
   font-size: xx-small;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
   background-color: #9356DC;
   color: white;
   position: absolute;
@@ -222,6 +222,13 @@ header .localisation__description {
 .fonctionnement__description {
   grid-column: 3/4;
   grid-row: 1/2;
+}
+
+.fonctionnement__contenu {
+  position: absolute;
+  top: -8px;
+  left: 9px;
+  font-size: small;
 }
 
 .restaurant {
@@ -295,7 +302,7 @@ a {
   width: 70px;
   height: 30px;
   background-color: #99E2D0;
-  color: #446159;
+  color: #1f997c;
   border-radius: 3px;
 }
 .carte__description {
@@ -311,9 +318,11 @@ a {
 .carte__nom {
   grid-column: 1/2;
   grid-row: 1/2;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 15px;
   align-self: start;
+  font-weight: bold;
+  font-size: medium;
 }
 .carte__localisation {
   grid-column: 1/2;
@@ -321,7 +330,7 @@ a {
   grid-row: 1/2;
   align-self: center;
   margin-top: 15px;
-  color: #b9b8b8;
+  color: black;
 }
 .carte__icone {
   position: relative;
@@ -330,7 +339,6 @@ a {
   width: 50%;
   grid-column: 2/3;
   grid-row: 1/2;
-  color: #646464;
   cursor: pointer;
   user-select: none;
   font-size: xx-large;
@@ -349,6 +357,8 @@ a {
   z-index: 3;
   background-color: white;
   transition-property: visibility;
+  color: black;
+  font-weight: lighter;
 }
 .carte__icone .coeur-plein {
   position: absolute;
