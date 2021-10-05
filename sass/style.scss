@@ -435,7 +435,9 @@ a{
 
 @media screen and (max-width: 775px){
  
-
+    .spinner__titre{
+        display: none;
+    }
  
     .contenant{
         flex-flow: column nowrap;
