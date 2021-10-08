@@ -3,16 +3,12 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css"/>
         <title>Ohmyfood</title>
         <script src="https://kit.fontawesome.com/2161a8dba9.js" crossorigin="anonymous"></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-            h1 { font-family: 'Shrikhand', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 200;}
-           li, p, h2, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
-            
-        </style> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -26,7 +22,7 @@
         
         <header>
             <article class="titre__site"> 
-                <h1>ohmyfood</h1>
+                <h1 class="titre__site--contenu">ohmyfood</h1>
             </article>
             <div class="localisation__contenant">
                 <i class="fas fa-map-marker-alt"></i>
@@ -82,7 +78,7 @@
 
                     <div class="restaurant__contenant">
 
-                        <a href="menu3.html">   
+                        <a href="menu3.html" class="carte__lien">   
                             
                             <div class="carte"> 
                             <div class="carte__image">
@@ -101,7 +97,7 @@
                     </a>
                      
 
-                        <a href="menu2.html">
+                        <a href="menu2.html" class="carte__lien">
                             <div class="carte"> 
                                 <div class="carte__image">
                                     <div class="carte__vignette">Nouveau</div>
@@ -123,7 +119,7 @@
 
 
 
-                               <a href="menu.html">
+                               <a href="menu.html" class="carte__lien">
                                    
                                 <div class="carte"> 
                                 <div class="carte__image">
@@ -142,7 +138,7 @@
                                 </div>
                             </a> 
 
-                                <a href="menu4.html"><div class="carte"> 
+                                <a href="menu4.html " class="carte__lien"><div class="carte"> 
                                     <div class="carte__image">
                                         <img src="Maquettes-Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="les délices des sens">
                                     </div> 
@@ -155,14 +151,10 @@
                                                 <i class="fas fa-heart coeur-plein"></i>
                                             </div>  
                                         </div>
-                                        
                                     </div>
-                                 </a>
-                                    
+                                 </a>  
                             </div>
-                    
                 </article>
-
         </main>
 
         <footer class="menu">
@@ -171,8 +163,8 @@
                 <li class="menu__onglet"><i class="fas fa-utensils menu__icone"></i>Proposer un restaurant</li>
                 <li class="menu__onglet"><i class="fas fa-hands-helping menu__icone"></i>Devenir partenaire </li>
                 <li class="menu__onglet">Mentions légale</li>
-                <li class="menu__onglet"> <a href="mailto:contact@ohmyfood.com" class="menu__onglet" style="color: white;"> Contact</a>
-                   
+                <li class="menu__onglet"> 
+                    <a class="menu__onglet" href="mailto:contact@ohmyfood.com"> Contact</a>
                 </li>
 
             </ul>

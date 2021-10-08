@@ -3,16 +3,26 @@
 @import "Utils/variable.scss";
 @import "Utils/animation.scss";
 @import "Utils/class-gene.scss";
-body{
-    margin:0;
-    padding: 0;
+
+h1, h2{
+    font-family: 'Shrikhand', cursive;
+}
+*{
+    font-family: 'Roboto', sans-serif;
 }
 
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+            h1 { font-family: 'Shrikhand', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 200;}
+h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
+
 .tete{
-   
     width: 100%;
     height: 80px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -35,31 +45,29 @@ body{
        align-self: center;
        grid-column: 1/2;
        grid-row: 1/2;
-      
    }
 }
 
 
 .image img {
-   
+
     width: 100%;
     height: 300px;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
     position: relative;
-    margin: 0px;
-    padding: 0px;
 
     &__contenant {
-        background-image: url(../Maquettes-Ohmyfood/imagesrestaurantstoa-heftiba-DQKerTsQwi0-unsplash.jpg);
-        
+        background-image: url(../Maquettes-Ohmyfood/imagesrestaurantstoa-heftiba-DQKerTsQwi0-unsplash.jpg); 
     }
 }
 
 .menu{
     position: absolute;
     top: 350px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 600px;
     background-color: #f3f3f3;
@@ -67,18 +75,20 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10% 75% 15%;
-    
+
     &__tete{
         grid-row: 1/2;
         grid-column: 1/4;
-
+        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        border: solid;
+        float: left;
+        grid-template-columns: 80% 20%;
         grid-template-rows: 1fr;
     }
     &__big--titre{
-        margin-left: 30px;
-        width: 250px;
+        margin-left: 15px;
+        width: auto;
         height: 30px;
         grid-row: 1/2;
         grid-column: 1/2;
@@ -86,35 +96,56 @@ body{
         justify-self: start;
         font-size: x-large;
         font-family: 'Shrikhand';
-       
+        display: flex;
+        flex-flow: row wrap;
     }
 
     &__titre{
+        font-weight: 200;
         border:none;
         border-bottom: $azure solid;
         width: 40px;
-        height: 30px;
-        margin-left: 30px;
+        height: 30px;  
     }
 
-    &__entre{
+    &__entre{ 
+        height: 381.717px;
         grid-column: 1/2;
         grid-row: 2/3; 
         align-self: center;
-        @include taille;
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+        padding-left: 25px;
+        padding-right: 25px;
+        position: relative;
     }
     &__plat{
+        height: 381.717px;
         grid-column: 2/3;
         grid-row: 2/3;
         align-self: center;
-        @include taille;
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+        padding-left: 25px;
+        padding-right: 25px;
+        position: relative;
     }
 
     &__desserts{
+        margin: 0px;
+        padding: 0px;
+        height: 381.717px;
         grid-column: 3/4;
         grid-row: 2/3;
         align-self: center;
-        @include taille;
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+        padding-left: 25px;
+        padding-right: 25px; 
+        position: relative;
     }
 
     &__bouton{
@@ -127,19 +158,20 @@ body{
     }
 
     &__coeur{
+        margin-top: 5px;
         position: relative;
         z-index: 1;
         grid-row: 1/2;
         grid-column: 2/3;
         font-size: x-large;
-       
-     
+        margin-right: 50px;
         width: 25px;
         height: 25px;
-        align-self: flex-end;
+        align-self: end;
         justify-self: end;
-        margin-right: 50px;
         @include animicone;
+        display: flex;
+        align-items: flex-end;
 
         .coeur-vide{
             background-color: #f3f3f3;
@@ -153,27 +185,20 @@ body{
     } 
 }
 
-
-
-
 .menu__contenant{
-    width: 75%;
+    width: 100%;
     height: 70px;
-    background-color: #f3f3f3;
+    margin-bottom: 30px;
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
     border-radius: 15px;
-    margin: 30px 0px 30px 0px;
     cursor: pointer;
     box-shadow: -1px 3px 6px 1px #e2e0e0;
     background-color: white;
     overflow: hidden;
-    position: relative;
     white-space: nowrap;
-    margin-left: 20px;
-    margin-right: 15px;
-    
+
 
     &:hover .menu__contenant--check {
         right: 0;
@@ -191,7 +216,6 @@ body{
 
 &--head{
     flex: 1 2 auto;
-    max-width: 90%;
     margin: 10px 0px 0px 15px;
     display:flex;
     flex-flow: row wrap;
@@ -200,22 +224,26 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    border: solid;
 }
     
 &--titre {
+    font-weight: 500;
     width: 100%;
     margin: 6px 0px 5px 0px;
     padding: 0px;
+    min-width: 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  
 }
 
 &--texte{
+  font-weight: 300;
    width: 100%;
    margin: 0px;
    padding: 0px; 
+   min-width: 0px;
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
@@ -247,7 +275,6 @@ body{
     position: absolute;
     right: -100px;
     padding-left: .5rem;
-    margin-left: 1rem;
 }
 
 &--turn{
@@ -258,20 +285,23 @@ body{
 }
 
 .menu__contenant:nth-child(2){  
-    @include scale-in-top; 
-    -webkit-animation: scale-in-top .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: scale-in-top .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0ms both;}
+    @include slide-in-bottom; 
+    -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .menu__contenant:nth-child(3){ 
-    @include scale-in-top; 
-    -webkit-animation: scale-in-top .6s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
-    animation: scale-in-top .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1ms both;}
-.menu__contenant:nth-child(4){  @include scale-in-top;
-    -webkit-animation: scale-in-top .7s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
-    animation: scale-in-top .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2ms both;}
+    @include slide-in-bottom; 
+    -webkit-animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.menu__contenant:nth-child(4){  @include slide-in-bottom;
+    -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 .foot {
-    top: 565px;
     position: relative;
+    top: 565px;
     height: 160px;
     background-color:rgb(66, 66, 66) ;
     display: flex;
@@ -281,20 +311,17 @@ body{
     padding-left: 20px;
     color: white;
 
-    &__titre
-    {
+    &__titre{
         margin: 10px 0px 10px 0px;
-        font-size: large;
-        
+        font-size: large;       
     }
 
     &__contenant{
-       
         padding: 0px;
         margin: 0px;
     }
-    &__onglet
-    {   
+
+    &__onglet{   
         display: flex;
         margin-top: 3px;
         align-items: center;
@@ -304,8 +331,7 @@ body{
     }
 
     &__icone{
-        margin-right: 5px;
-       
+        margin-right: 5px;  
     }
 
 }
@@ -313,13 +339,13 @@ body{
 @media screen and (max-width: 1200px){
     .menu{
         height: 1300px;
+    
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
         &__tete {
             grid-column: 1/2;
             grid-row: 1/2;
-         
         }
 
         &__entre{
@@ -327,22 +353,26 @@ body{
             grid-row: 2/3; 
             align-self: center;
         }
+
         &__plat{
             grid-column: 1/2;
             grid-row: 3/4;
-       
         }
     
         &__desserts{
             grid-column: 1/2;
-            grid-row: 4/5;
-          
+            grid-row: 4/5;    
         }
 
         &__bouton{
+            width: 50%;
             grid-column: 1/2;
             grid-row: 5/6;
+            justify-self: center;
+            align-self: center;
+            margin-bottom: 20px;
         }
+
         &__coeur{
             align-self: center;
         }
@@ -353,21 +383,21 @@ body{
 
     }
 
-    .menu__contenant{
-        width: 90%;
-    }
 
     .foot{
         top: 1260px;
     }
+
+}
+@media screen and (max-width: 450px){
+
+    .menu__contenant{
+        width: 350px;
+    }
 }
 
 @media screen and (max-width: 400px){
-
     .menu__contenant{
-        width: 75%;
-        margin-left: 35px;
-        
-       
+        width: 300px;
     }
 }

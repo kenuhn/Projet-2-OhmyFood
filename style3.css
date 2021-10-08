@@ -21,6 +21,14 @@ body {
   padding: 0;
 }
 
+h1, h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .tete {
   width: 100%;
   height: 80px;
@@ -39,6 +47,7 @@ body {
 .tete__fleches {
   margin-left: 35px;
   font-size: xx-large;
+  color: black;
   width: 25px;
   align-self: center;
   grid-column: 1/2;
@@ -73,13 +82,15 @@ body {
 .menu__tete {
   grid-row: 1/2;
   grid-column: 1/4;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  border: solid;
+  float: left;
+  grid-template-columns: 80% 20%;
 }
 .menu__big--titre {
-  margin-left: 50px;
-  width: 300px;
+  margin-left: 15px;
+  width: auto;
   height: 30px;
   grid-row: 1/2;
   grid-column: 1/2;
@@ -87,8 +98,11 @@ body {
   justify-self: start;
   font-size: x-large;
   font-family: "Shrikhand";
+  display: flex;
+  flex-flow: row wrap;
 }
 .menu__titre {
+  font-weight: lighter;
   border: none;
   border-bottom: #99E2D0 solid;
   width: 40px;
@@ -100,7 +114,6 @@ body {
   grid-row: 2/3;
   margin-top: 20px;
   align-self: start;
-  margin-left: 20px;
   width: 100%;
 }
 .menu__plat {
@@ -108,7 +121,6 @@ body {
   grid-column: 2/3;
   grid-row: 2/3;
   align-self: start;
-  margin-left: 20px;
   width: 100%;
 }
 .menu__desserts {
@@ -116,12 +128,11 @@ body {
   grid-column: 3/4;
   grid-row: 2/3;
   align-self: start;
-  margin-left: 20px;
   width: 100%;
 }
 .menu__bouton {
   border-radius: 30px;
-  width: 45%;
+  width: 50%;
   height: 50px;
   color: white;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -144,6 +155,7 @@ body {
   background-color: transparent;
 }
 .menu__coeur {
+  margin-top: 5px;
   position: relative;
   z-index: 1;
   grid-row: 1/2;
@@ -162,6 +174,8 @@ body {
   z-index: 3;
   background-color: white;
   transition-property: visibility;
+  color: black;
+  font-weight: lighter;
 }
 .menu__coeur .coeur-plein {
   position: absolute;
@@ -224,6 +238,7 @@ body {
   white-space: nowrap;
 }
 .menu__contenant--titre {
+  font-weight: 500;
   width: 100%;
   margin: 6px 0px 5px 0px;
   padding: 0px;
@@ -232,6 +247,7 @@ body {
   white-space: nowrap;
 }
 .menu__contenant--texte {
+  font-weight: 300;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -273,149 +289,117 @@ body {
 }
 
 .menu__contenant:nth-child(2) {
-  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms both;
+  -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@-webkit-keyframes scale-in-top {
+@-webkit-keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-top {
+@keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .menu__contenant:nth-child(3) {
-  -webkit-animation: scale-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1ms both;
+  -webkit-animation: slide-in-bottom 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@-webkit-keyframes scale-in-top {
+@-webkit-keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-top {
+@keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .menu__contenant:nth-child(4) {
-  -webkit-animation: scale-in-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2ms both;
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@-webkit-keyframes scale-in-top {
+@-webkit-keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-top {
+@keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .menu__contenant:nth-child(5) {
-  -webkit-animation: scale-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2ms both;
+  -webkit-animation: slide-in-bottom 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@-webkit-keyframes scale-in-top {
+@-webkit-keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-top {
+@keyframes slide-in-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -491,6 +475,16 @@ body {
 
   .foot {
     top: 1460px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .menu__contenant {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu__contenant {
+    width: 310px;
   }
 }
 
