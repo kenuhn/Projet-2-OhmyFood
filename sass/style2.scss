@@ -81,7 +81,6 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
         grid-column: 1/4;
         width: 100%;
         display: grid;
-        border: solid;
         float: left;
         grid-template-columns: 80% 20%;
         grid-template-rows: 1fr;
@@ -224,7 +223,6 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border: solid;
 }
     
 &--titre {

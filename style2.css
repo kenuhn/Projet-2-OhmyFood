@@ -95,7 +95,6 @@ h4, li, p, div {
   grid-column: 1/4;
   width: 100%;
   display: grid;
-  border: solid;
   float: left;
   grid-template-columns: 80% 20%;
   grid-template-rows: 1fr;
@@ -261,7 +260,6 @@ h4, li, p, div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border: solid;
 }
 .menu__contenant--titre {
   font-weight: 500;
