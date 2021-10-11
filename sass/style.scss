@@ -32,7 +32,7 @@ $degrade-eclairci: linear-gradient(to top left, #8d52d6, #fd8ede );
     width: 100%;
     @extend %centrer;
     position: fixed;
-    z-index: 20;
+    z-index: 200;
     font-size: xx-large;
     animation: visibilite 1s linear ;
     visibility: hidden;

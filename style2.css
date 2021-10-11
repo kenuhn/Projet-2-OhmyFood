@@ -25,6 +25,72 @@ h1, h2 {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  background-color: rgba(255, 255, 255, 0.459);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 40;
+  font-size: xx-large;
+  animation: visibilite 1s linear;
+  visibility: hidden;
+}
+@keyframes visibilite {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.spinner__loader {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+}
+.spinner__loader--circle {
+  position: relative;
+  border: solid white 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+}
+.spinner__loader--circle:after {
+  content: "";
+  position: absolute;
+  border: solid white 10px;
+  border-right: solid #99E2D0 10px;
+  border-left: solid #9356DC 10px;
+  border-bottom: solid #FF79DA 10px;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 html, body {
   width: 100%;
   margin: 0;
@@ -38,6 +104,65 @@ h1 {
 
 h4, li, p, div {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.spinner {
+  background-color: rgba(255, 255, 255, 0.459);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 40;
+  font-size: xx-large;
+  animation: visibilite 1s linear;
+  visibility: hidden;
+}
+@keyframes visibilite {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.spinner__loader {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+}
+.spinner__loader--circle {
+  position: relative;
+  border: solid white 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+}
+.spinner__loader--circle:after {
+  content: "";
+  position: absolute;
+  border: solid white 10px;
+  border-right: solid #99E2D0 10px;
+  border-left: solid #9356DC 10px;
+  border-bottom: solid #FF79DA 10px;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .tete {
@@ -432,6 +557,10 @@ h4, li, p, div {
 }
 
 @media screen and (max-width: 1200px) {
+  .spinner__titre {
+    display: none;
+  }
+
   .menu {
     height: 1300px;
     grid-template-columns: 1fr;

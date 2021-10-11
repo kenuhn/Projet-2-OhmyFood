@@ -10,7 +10,16 @@ h1, h2{
 *{
     font-family: 'Roboto', sans-serif;
 }
+%centrer {
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.spinner{
+    @include anima-spinner;
+}
 html, body{
     width: 100%;
     margin: 0;
@@ -19,6 +28,10 @@ html, body{
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
             h1 { font-family: 'Shrikhand', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 200;}
 h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
+
+.spinner{
+    @include anima-spinner;
+ }
 
 .tete{
     width: 100%;
@@ -335,6 +348,9 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
 }
 
 @media screen and (max-width: 1200px){
+    .spinner__titre{
+        display: none;
+    }
     .menu{
         height: 1300px;
     
@@ -378,9 +394,7 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
         &__big--titre{
             align-self: center;
         }
-
     }
-
 
     .foot{
         top: 1260px;

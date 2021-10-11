@@ -71,3 +71,62 @@
         }
       }
 } 
+
+  @mixin anima-spinner{
+    background-color: rgba(255, 255, 255, 0.459);
+    height:100%;
+    width: 100%;
+    @extend %centrer;
+    position: fixed;
+    z-index: 40;
+    font-size: xx-large;
+    animation: visibilite 1s linear ;
+    visibility: hidden;
+    
+    @keyframes visibilite{
+        0%{visibility: visible;
+            opacity: 0.9;
+        }
+        100%{ visibility: hidden;}
+    }
+
+    &__loader{
+        display: flex ;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 30%;
+    }
+
+    &__loader--circle{
+        position: relative;
+        border: solid white 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 60px;
+    }
+
+    &__loader--circle:after {
+        content: '';
+        position: absolute;
+        border: solid white 10px;
+        border-right:solid $azure 10px ;
+        border-left:solid $violet 10px ;
+        border-bottom:solid $rose 10px ;
+        top: -10px;
+        left: -10px;
+        bottom: -10px;
+        right: -10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 60px;
+        
+        animation: spin 1s linear infinite;
+
+        @keyframes spin { 
+            0%{transform:rotate(0)}
+            100%{transform:rotate(360deg)}
+        }
+    }
+  }
