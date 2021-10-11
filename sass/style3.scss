@@ -3,7 +3,7 @@
 @import "Utils/animation.scss";
 @import "Utils/class-gene.scss";
 
-body{
+ body, html{
     margin:0;
     padding: 0;
 }
@@ -345,6 +345,7 @@ h1, h2{
         }
 
         &__entre{
+            margin-top: 0;
             grid-column: 1/2;
             grid-row: 2/3; 
             align-self: center;
