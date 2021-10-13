@@ -156,7 +156,7 @@ h1, h2 {
   grid-template-columns: 80% 20%;
 }
 .menu__big--titre {
-  margin-left: 20px;
+  margin-left: 25px;
   width: auto;
   height: 30px;
   grid-row: 1/2;
@@ -329,6 +329,7 @@ h1, h2 {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
+  transition: 400ms;
   flex-basis: 1rem;
   height: 50px;
 }
@@ -343,6 +344,7 @@ h1, h2 {
   font-size: xx-large;
   border-radius: 0px;
   position: absolute;
+  transition: 400ms;
   right: -100px;
   padding-left: 0.5rem;
   margin-left: 1rem;

@@ -402,6 +402,7 @@ h4, li, p, div {
   font-weight: bold;
   flex-basis: 1rem;
   height: 50px;
+  transition: 400ms;
 }
 .menu__contenant--check {
   background-color: #99E2D0;
@@ -415,6 +416,7 @@ h4, li, p, div {
   border-radius: 0px;
   position: absolute;
   right: -100px;
+  transition: 400ms;
   padding-left: 0.5rem;
 }
 .menu__contenant--turn {
