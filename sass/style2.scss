@@ -20,8 +20,7 @@ h1, h2{
 .spinner{
     @include anima-spinner;
 }
-html, body{
-    width: 100%;
+body{
     margin: 0;
     padding: 0;
 }
@@ -99,7 +98,7 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
         grid-template-rows: 1fr;
     }
     &__big--titre{
-        margin-left: 15px;
+        margin-left: 25px;
         width: auto;
         height: 30px;
         grid-row: 1/2;
@@ -113,6 +112,8 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
     }
 
     &__titre{
+        margin-top: 20px;
+        margin-left: 30px;
         font-weight: 200;
         border:none;
         border-bottom: $azure solid;
@@ -121,43 +122,26 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
     }
 
     &__entre{ 
-        height: 381.717px;
+        margin-top: 20px;
         grid-column: 1/2;
         grid-row: 2/3; 
-        align-self: center;
-        display: flex;
-        flex-flow: column;
-        flex: 1;
-        padding-left: 25px;
-        padding-right: 25px;
-        position: relative;
+        align-self: start;
+        width: 100%;
     }
     &__plat{
-        height: 381.717px;
+        margin-top: 20px;
         grid-column: 2/3;
         grid-row: 2/3;
-        align-self: center;
-        display: flex;
-        flex-flow: column;
-        flex: 1;
-        padding-left: 25px;
-        padding-right: 25px;
-        position: relative;
+        align-self: start;
+        width: 100%;
     }
 
     &__desserts{
-        margin: 0px;
-        padding: 0px;
-        height: 381.717px;
+        margin-top: 20px;
+        width: 100%;
         grid-column: 3/4;
         grid-row: 2/3;
-        align-self: center;
-        display: flex;
-        flex-flow: column;
-        flex: 1;
-        padding-left: 25px;
-        padding-right: 25px; 
-        position: relative;
+        align-self: start;
     }
 
     &__bouton{
@@ -198,9 +182,9 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
 }
 
 .menu__contenant{
-    width: 100%;
+    width: 90%;
     height: 70px;
-    margin-bottom: 30px;
+    margin: 30px 0px 30px 20px;
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -210,7 +194,7 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
     background-color: white;
     overflow: hidden;
     white-space: nowrap;
-
+    position: relative;
 
     &:hover .menu__contenant--check {
         right: 0;
@@ -312,6 +296,7 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
 
 .foot {
     position: relative;
+    z-index: 3;
     top: 565px;
     height: 160px;
     background-color:rgb(66, 66, 66) ;
@@ -352,64 +337,36 @@ h4, li, p, div{ font-family: 'Roboto', Arial, Helvetica, sans-serif;}
         display: none;
     }
     .menu{
-        height: 1300px;
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: 1400px;
+        display: flex;
+        flex-flow: column wrap;
 
         &__tete {
+            margin-top: 20px;
             grid-column: 1/2;
-            grid-row: 1/2;
+            grid-row: 1/2; 
         }
 
         &__entre{
-            grid-column: 1/2;
-            grid-row: 2/3; 
-            align-self: center;
+            margin-top: 20px;
         }
 
         &__plat{
-            grid-column: 1/2;
-            grid-row: 3/4;
+            margin-top: 0px;
         }
-    
+
         &__desserts{
-            grid-column: 1/2;
-            grid-row: 4/5;    
+            margin-top: 0px;
         }
 
         &__bouton{
-            width: 50%;
-            grid-column: 1/2;
-            grid-row: 5/6;
-            justify-self: center;
             align-self: center;
-            margin-bottom: 20px;
-        }
-
-        &__coeur{
-            align-self: center;
-        }
-
-        &__big--titre{
-            align-self: center;
-        }
+            width: 200px; 
+        }  
     }
 
     .foot{
         top: 1260px;
     }
 
-}
-@media screen and (max-width: 450px){
-
-    .menu__contenant{
-        width: 350px;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .menu__contenant{
-        width: 300px;
-    }
 }
